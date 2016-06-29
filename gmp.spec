@@ -1,11 +1,11 @@
 Name:           gmp
-Version:        6.1.0
+Version:        6.1.1
 Release:        24
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
 Group:          devel
-Source0:        http://ftp.gnu.org/gnu/gmp/gmp-6.1.0.tar.xz
+Source0:        http://ftp.gnu.org/gnu/gmp/gmp-6.1.1.tar.xz
 BuildRequires:  grep bison flex readline-dev  ncurses-dev
 BuildRequires:  libstdc++-dev
 
@@ -54,7 +54,7 @@ GNU multiprecision arithmetic library.
 # gmp fails to compile with PIE
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
-export CFLAGS="-O3  -g2 "
+export CFLAGS="-O3  -g -fno-semantic-interposition "
 export CXXFLAGS="$CFLAGS"
 
 ./configure --host=%{_arch}-unknown-linux-gnu --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/bin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/usr/com --mandir=/usr/share/man --infodir=/usr/share/info --enable-cxx=detect --disable-static --enable-shared
@@ -69,7 +69,7 @@ make check
 
 %files -n libgmpxx4
 %{_libdir}/libgmpxx.so.4
-%{_libdir}/libgmpxx.so.4.*.0
+%{_libdir}/libgmpxx.so.4.*
 
 %files dev
 %{_includedir}/gmp.h
@@ -84,6 +84,6 @@ make check
 
 %files lib
 %{_libdir}/libgmp.so.10
-%{_libdir}/libgmp.so.10.*.0
+%{_libdir}/libgmp.so.10.*
 
 
