@@ -1,11 +1,11 @@
 Name:           gmp
-Version:        6.1.1
+Version:        6.1.2
 Release:        28
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
 Group:          devel
-Source0:        http://ftp.gnu.org/gnu/gmp/gmp-6.1.1.tar.xz
+Source0:        http://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz
 BuildRequires:  grep bison flex readline-dev  ncurses-dev zlib-dev32 readline-dev32
 BuildRequires:  libstdc++-dev
 BuildRequires:  gcc-dev32
@@ -130,9 +130,9 @@ popd
 
 %files lib32
 /usr/lib32/libgmp.so.10
-/usr/lib32/libgmp.so.10.3.1
+/usr/lib32/libgmp.so.10.3.2
 /usr/lib32/libgmpxx.so.4
-/usr/lib32/libgmpxx.so.4.5.1
+/usr/lib32/libgmpxx.so.4.5.2
 
 %files dev32
 /usr/lib32/libgmpxx.so
