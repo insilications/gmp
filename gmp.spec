@@ -1,6 +1,6 @@
 Name:           gmp
 Version:        6.1.2
-Release:        29
+Release:        30
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
@@ -18,12 +18,12 @@ BuildRequires:  glibc-libc32
 %description
 GNU multiprecision arithmetic library.
 
-%package -n libgmpxx4
+%package gmpxx
 License:        LGPL-3.0 and GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Group:          devel
 
-%description -n libgmpxx4
+%description gmpxx
 GNU multiprecision arithmetic library.
 
 
@@ -63,6 +63,14 @@ Group:          devel
 %description lib
 GNU multiprecision arithmetic library.
 
+%package lib-hsw
+License:        LGPL-3.0 and GPL-3.0
+Summary:        GNU multiprecision arithmetic library
+Group:          devel
+
+%description lib-hsw
+GNU multiprecision arithmetic library.
+
 %package lib32
 License:        LGPL-3.0 and GPL-3.0
 Summary:        GNU multiprecision arithmetic library
@@ -75,6 +83,7 @@ GNU multiprecision arithmetic library.
 %setup -q
 pushd ..
 cp -a gmp-%{version} build32
+cp -a gmp-%{version} buildhsw
 popd
 
 %build
@@ -89,6 +98,13 @@ export CXXFLAGS="$CFLAGS"
 make %{?_smp_mflags}
 make check
 
+pushd ../buildhsw
+export CFLAGS="-O3  -g -fno-semantic-interposition -march=haswell -ffat-lto-objects  -flto=4 "
+export CXXFLAGS="$CFLAGS"
+
+./configure --host=coreihwl-unknown-linux-gnu --build=coreihwl-linux-gnu --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/bin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64/haswell --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/usr/share --mandir=/usr/share/man --infodir=/usr/share/info --enable-cxx=detect --disable-static --enable-shared
+make %{?_smp_mflags}
+popd
 pushd ../build32
 export CFLAGS="-O3  -g -fno-semantic-interposition -m32"
 export CXXFLAGS="$CFLAGS"
@@ -103,12 +119,15 @@ popd
 pushd ../build32
 %make_install32
 popd
+pushd ../buildhsw
+%make_install
+popd
 
 %make_install
 
 %files
 
-%files -n libgmpxx4
+%files gmpxx
 %{_libdir}/libgmpxx.so.4
 %{_libdir}/libgmpxx.so.4.*
 
@@ -137,3 +156,12 @@ popd
 %files dev32
 /usr/lib32/libgmpxx.so
 /usr/lib32/libgmp.so
+
+
+%files lib-hsw
+%exclude /usr/lib64/haswell/libgmp.so
+/usr/lib64/haswell/libgmp.so.10
+/usr/lib64/haswell/libgmp.so.10.*
+%exclude /usr/lib64/haswell/libgmpxx.so
+/usr/lib64/haswell/libgmpxx.so.4
+/usr/lib64/haswell/libgmpxx.so.4.*
