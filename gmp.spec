@@ -1,6 +1,6 @@
 Name:           gmp
 Version:        6.1.2
-Release:        34
+Release:        35
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
@@ -68,6 +68,7 @@ GNU multiprecision arithmetic library.
 License:        LGPL-3.0 and GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Group:          devel
+Requires:	gmp-lib
 
 %description lib-hsw
 GNU multiprecision arithmetic library.
