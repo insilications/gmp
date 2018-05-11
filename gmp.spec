@@ -164,6 +164,3 @@ popd
 %exclude /usr/lib64/haswell/libgmp.so
 /usr/lib64/haswell/libgmp.so.10
 /usr/lib64/haswell/libgmp.so.10.*
-%exclude /usr/lib64/haswell/libgmpxx.so
-/usr/lib64/haswell/libgmpxx.so.4
-/usr/lib64/haswell/libgmpxx.so.4.*
