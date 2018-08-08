@@ -1,6 +1,6 @@
 Name:           gmp
 Version:        6.1.2
-Release:        37
+Release:        38
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
@@ -124,8 +124,10 @@ popd
 pushd ../buildhsw
 %make_install
 popd
-
 %make_install
+
+# Fix hardcoded size of mp_limb_t (long) with GCC predefined macros
+sed -i '/#define GMP_LIMB_BITS/s/64/(__SIZEOF_LONG__ * __CHAR_BIT__)/' %{?buildroot}/usr/include/gmp.h
 
 %files
 
