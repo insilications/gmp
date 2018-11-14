@@ -5,7 +5,7 @@ License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
 Group:          devel
-Source0:        http://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/gmp/gmp-6.1.2.tar.xz
 BuildRequires:  grep bison flex readline-dev  ncurses-dev zlib-dev32 readline-dev32
 BuildRequires:  libstdc++-dev
 BuildRequires:  gcc-dev32
