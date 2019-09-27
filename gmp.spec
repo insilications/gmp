@@ -1,6 +1,6 @@
 Name:           gmp
 Version:        6.1.2
-Release:        40
+Release:        41
 License:        LGPL-3.0 GPL-3.0
 Summary:        GNU multiprecision arithmetic library
 Url:            http://gmplib.org/
@@ -108,7 +108,7 @@ export CXXFLAGS="$CFLAGS"
 make %{?_smp_mflags}
 popd
 pushd ../build32
-export CFLAGS="-O3  -g -fno-semantic-interposition -m32"
+export CFLAGS="-O3  -g -fno-semantic-interposition -m32 -mstackrealign"
 export CXXFLAGS="$CFLAGS"
 
 ./configure --host=i686-unknown-linux-gnu --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/bin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib32 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/usr/share --mandir=/usr/share/man --infodir=/usr/share/info --enable-cxx=detect --disable-static --enable-shared
