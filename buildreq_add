@@ -2,4 +2,20 @@
 # This file contains extra pkgconfig build requirements that don't get picked up but are 
 # desirable. One name per line, no whitespace.
 #
+bison
+findutils
+flex
+gcc-dev32
+gcc-libgcc32
+gcc-libstdc++32
+glibc-dev32
+glibc-libc32
+grep
+libstdc++-dev
+ncurses-dev
+readline-dev
+readline-dev32
+zlib-dev
 zlib-dev32
+zlib-staticdev
+zlib-staticdev32

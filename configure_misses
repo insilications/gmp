@@ -1,0 +1,102 @@
+Configure miss: kabylake-unknown-linux-gnu-strip
+Configure miss: kabylake-unknown-linux-gnu-mt
+Configure miss: invent.h usability
+Configure miss: invent.h presence
+Configure miss: invent.h
+Configure miss: sys/attributes.h usability
+Configure miss: sys/attributes.h presence
+Configure miss: sys/attributes.h
+Configure miss: sys/iograph.h usability
+Configure miss: sys/iograph.h presence
+Configure miss: sys/iograph.h
+Configure miss: sys/processor.h usability
+Configure miss: sys/processor.h presence
+Configure miss: sys/processor.h
+Configure miss: sys/pstat.h usability
+Configure miss: sys/pstat.h presence
+Configure miss: sys/syssgi.h usability
+Configure miss: sys/syssgi.h presence
+Configure miss: sys/syssgi.h
+Configure miss: sys/systemcfg.h usability
+Configure miss: sys/systemcfg.h presence
+Configure miss: sys/systemcfg.h
+Configure miss: attr_get
+Configure miss: cputime
+Configure miss: processor_info
+Configure miss: pstat_getprocessor
+Configure miss: syssgi
+Configure miss: sysctlbyname
+Configure miss: struct pst_processor.psp_iticksperclktick
+Configure miss: if m4wrap produces spurious output
+Configure miss: if globals are prefixed by underscore
+Configure miss: if .align assembly directive is logarithmic
+Configure miss: kabylake-unknown-linux-gnu-strip
+Configure miss: kabylake-unknown-linux-gnu-mt
+Configure miss: invent.h usability
+Configure miss: invent.h presence
+Configure miss: invent.h
+Configure miss: sys/attributes.h usability
+Configure miss: sys/attributes.h presence
+Configure miss: sys/attributes.h
+Configure miss: sys/iograph.h usability
+Configure miss: sys/iograph.h presence
+Configure miss: sys/iograph.h
+Configure miss: sys/processor.h usability
+Configure miss: sys/processor.h presence
+Configure miss: sys/processor.h
+Configure miss: sys/pstat.h usability
+Configure miss: sys/pstat.h presence
+Configure miss: sys/syssgi.h usability
+Configure miss: sys/syssgi.h presence
+Configure miss: sys/syssgi.h
+Configure miss: sys/systemcfg.h usability
+Configure miss: sys/systemcfg.h presence
+Configure miss: sys/systemcfg.h
+Configure miss: attr_get
+Configure miss: cputime
+Configure miss: processor_info
+Configure miss: pstat_getprocessor
+Configure miss: syssgi
+Configure miss: sysctlbyname
+Configure miss: whether sscanf needs writable input
+Configure miss: struct pst_processor.psp_iticksperclktick
+Configure miss: if m4wrap produces spurious output
+Configure miss: if globals are prefixed by underscore
+Configure miss: if .align assembly directive is logarithmic
+Configure miss: i686-unknown-linux-gnu-strip
+Configure miss: i686-unknown-linux-gnu-mt
+Configure miss: invent.h usability
+Configure miss: invent.h presence
+Configure miss: invent.h
+Configure miss: sys/attributes.h usability
+Configure miss: sys/attributes.h presence
+Configure miss: sys/attributes.h
+Configure miss: sys/iograph.h usability
+Configure miss: sys/iograph.h presence
+Configure miss: sys/iograph.h
+Configure miss: sys/processor.h usability
+Configure miss: sys/processor.h presence
+Configure miss: sys/processor.h
+Configure miss: sys/pstat.h usability
+Configure miss: sys/pstat.h presence
+Configure miss: sys/syssgi.h usability
+Configure miss: sys/syssgi.h presence
+Configure miss: sys/syssgi.h
+Configure miss: sys/systemcfg.h usability
+Configure miss: sys/systemcfg.h presence
+Configure miss: sys/systemcfg.h
+Configure miss: attr_get
+Configure miss: cputime
+Configure miss: processor_info
+Configure miss: pstat_getprocessor
+Configure miss: syssgi
+Configure miss: sysctlbyname
+Configure miss: whether sscanf needs writable input
+Configure miss: struct pst_processor.psp_iticksperclktick
+Configure miss: if m4wrap produces spurious output
+Configure miss: if globals are prefixed by underscore
+Configure miss: if .align assembly directive is logarithmic
+Configure miss: assembler COFF type directives
+Configure miss: if _GLOBAL_OFFSET_TABLE_ is prefixed by underscore
+Configure miss: tputs in -lncurses
+Configure miss: tputs in -lcurses
