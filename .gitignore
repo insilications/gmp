@@ -18,3 +18,4 @@ results/
 rpms/
 for-review.txt
 *.tar
+*.gem
